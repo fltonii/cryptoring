@@ -37,16 +37,12 @@ exports[`Login snapshot 1`] = `
         />
       </div>
       <br />
-      <div
-        to="/"
+      <button
+        class="StyledButton-sc-323bzc-0 jcunWI"
+        type="submit"
       >
-        <button
-          class="StyledButton-sc-323bzc-0 jcunWI"
-          type="submit"
-        >
-          Log In!
-        </button>
-      </div>
+        Log In!
+      </button>
     </form>
     <pre>
       {"username":"","password":""}

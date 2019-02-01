@@ -3,7 +3,7 @@ import { render, fireEvent } from "react-testing-library";
 import Login from "../pages/Login";
 
 jest.mock("react-router-dom", () => ({
-  Link: "div"
+  withRouter: jest.fn().mockImplementation(component => component)
 }));
 
 test("Login snapshot", () => {
@@ -21,4 +21,6 @@ test("onSubmit gets called by button", () => {
 
   expect(usrname.value).toEqual("fltonii");
   expect(pwrd.value).toEqual("123456");
+
+  submit.click();
 });

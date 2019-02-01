@@ -2,9 +2,9 @@ import * as React from "react";
 import { Box, TextInput, Text, Button } from "grommet";
 import { ContentWrapper } from "../components/";
 import { useSetTitle } from "../hooks";
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
-const Login = (props: object) => {
+const Login = withRouter(({ history }) => {
   const [formVal, setFormVal] = React.useState({
     username: "",
     password: ""
@@ -20,6 +20,7 @@ const Login = (props: object) => {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(e);
+    history.push("/");
   };
 
   return (
@@ -45,14 +46,12 @@ const Login = (props: object) => {
           <br />
           <TextInput name="password" placeholder="password" />
           <br />
-          <Link to="/">
             <Button type="submit" color="main" hoverIndicator label="Log In!" />
-          </Link>
         </form>
         <pre>{JSON.stringify(formVal)}</pre>
       </Box>
     </ContentWrapper>
   );
-};
+});
 
 export default Login;
