@@ -1,41 +1,26 @@
 import * as React from "react";
-import { useSetTitle } from "../hooks";
+import api from "../utils/api";
 
-var ex = new WebSocket("wss://ws.kraken.com");
+const Dashboard = () => {
+  const [currencies, setCurrencies] = React.useState([{ id: "none" }]);
 
-ex.onopen = () => {
-  ex.send(
-    JSON.stringify({
-      event: "subscribe",
-      pair: ["XBT/EUR"],
-      subscription: {
-        name: "trade"
-      }
-    })
-  );
-};
+  React.useEffect(() => {
+    api
+      .currencies()
+      .then(res => setCurrencies(res.data))
+      .catch(err => {
+        throw new Error(err);
+      });
+  }, []);
 
-const Dashboard = (props: object) => {
-  const [current, setCurrent] = React.useState("enstablishing connection");
-  ex.onmessage = evt => {
-    const data = JSON.parse(evt.data);
-    console.log(data);
-    if (Array.isArray(data)) {
-      setCurrent(data[0][0]);
-    }
-  };
-
-  useSetTitle("Dahsboard");
   return (
-    <>
-      <h1 style={{ color: "#eee" }}>{current}</h1>
-      <button
-        type="button"
-        onClick={() => ex.send(JSON.stringify({ event: "ping" }))}
-      >
-        Ping
-      </button>
-    </>
+    <ul>
+      {currencies.map(currency => (
+        <li>
+          <h3 style={{ color: "#eee" }}>{currency.id}</h3>
+        </li>
+      ))}
+    </ul>
   );
 };
 
