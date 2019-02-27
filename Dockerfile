@@ -1,6 +1,10 @@
-FROM 8.15.0-alpine
+FROM node:8.15.0-alpine
 
-WORKDIR ~/experiments/cryptoring
+WORKDIR /cryptoring
+
+COPY . /cryptoring
+
+RUN yarn install
 RUN yarn jest
 RUN yarn build
 CMD ["yarn", "start"] 
