@@ -23,3 +23,10 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run:
+          name: Build and push image
+          command: |
+            docker build -t fltonii/$IMAGE_NAME:$TAG .
+            docker login -u $DOCKER_LOGIN --password-stdin
+            docker push fltonii/$IMAGE_NAME:$TAG
