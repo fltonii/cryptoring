@@ -15,7 +15,7 @@ const Dashboard = () => {
 
   return (
     <ul>
-      {currencies.map(currency => (
+      {(currencies || []).map(currency => (
         <li>
           <h3 style={{ color: "#eee" }}>{currency.id}</h3>
         </li>
