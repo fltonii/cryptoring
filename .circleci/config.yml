@@ -31,3 +31,7 @@ jobs:
             docker build -t fltonii/$IMAGE_NAME:$TAG .
             echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
             docker push fltonii/$IMAGE_NAME:$TAG
+       - run:
+          name: Deploy app to Digital Ocean Server via Docker
+          command: |
+            ssh -o StrictHostKeyChecking=no root@134.209.10.72 "/bin/bash ./deploy_cryptoring.sh fltonii/$IMAGE_NAME:$TAG"
