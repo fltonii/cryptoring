@@ -29,5 +29,5 @@ jobs:
           name: Build and push image
           command: |
             docker build -t fltonii/$IMAGE_NAME:$TAG .
-            docker login -u $DOCKER_LOGIN --password-stdin
+            echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
             docker push fltonii/$IMAGE_NAME:$TAG
