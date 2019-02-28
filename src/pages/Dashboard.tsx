@@ -4,6 +4,8 @@ import api from "../utils/api";
 const Dashboard = () => {
   const [currencies, setCurrencies] = React.useState([{ id: "none" }]);
 
+  console.log(currencies);
+
   React.useEffect(() => {
     api
       .currencies()
@@ -13,15 +15,7 @@ const Dashboard = () => {
       });
   }, []);
 
-  return (
-    <ul>
-      {(currencies || []).map(currency => (
-        <li>
-          <h3 style={{ color: "#eee" }}>{currency.id}</h3>
-        </li>
-      ))}
-    </ul>
-  );
+  return <h3 style={{ color: "#eee" }}>kkkkkkkkkkk</h3>;
 };
 
 export default Dashboard;
