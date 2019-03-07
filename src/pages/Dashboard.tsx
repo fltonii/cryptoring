@@ -15,7 +15,7 @@ const Dashboard = () => {
   //     });
   // }, []);
 
-  return <h3 style={{ color: "#eee" }}>testanoooo</h3>;
+  return <h3 style={{ color: "#eee" }}>bananas</h3>;
 };
 
 export default Dashboard;
