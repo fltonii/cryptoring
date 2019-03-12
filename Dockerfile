@@ -4,7 +4,7 @@ WORKDIR /cryptoring
 
 COPY . /cryptoring
 
-RUN yarn jest
+# RUN yarn jest
 RUN yarn install
 RUN yarn build
 
