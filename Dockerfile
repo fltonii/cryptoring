@@ -4,6 +4,7 @@ WORKDIR /cryptoring
 
 COPY . /cryptoring
 
+RUN yarn test
 RUN yarn install
 RUN yarn build
 

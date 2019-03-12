@@ -1,11 +1,154 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Login snapshot 1`] = `
+exports[`Dashboard test: snapshot 1`] = `
+<div
+  class="sc-bwzfXH bOHgui"
+>
+  <div
+    class="sc-htpNat AEbwt"
+  >
+    <span
+      class="StyledText-sc-1sadyjn-0 cFAQcz"
+    >
+      Hey there, trader!
+    </span>
+    <span
+      class="StyledText-sc-1sadyjn-0 eXagAY"
+    >
+      This is the list of cryptocurrencies that can make you deaf!
+    </span>
+  </div>
+  <div
+    class="StyledStack-ajspsk-0 cBSAEZ"
+  >
+    <div
+      class="StyledStack__StyledStackLayer-ajspsk-1 zZZtW"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 gSqlow"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 IRSNj"
+        >
+          <div
+            class="sc-bxivhb forvYJ"
+          >
+            <span
+              class="StyledText-sc-1sadyjn-0 kHwrCo"
+            >
+              none
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="StyledStack__StyledStackLayer-ajspsk-1 ekmpaB"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 eKHNGK"
+        tabindex="0"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 dkhTXm"
+        >
+          <button
+            class="StyledButton-sc-323bzc-0 fzQtuL"
+            disabled=""
+            type="button"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 VhefZ"
+            >
+              <svg
+                aria-label="Previous"
+                class="StyledIcon-ofa7kd-0 iOkQrb"
+                viewBox="0 0 24 24"
+              >
+                <polyline
+                  fill="none"
+                  points="7 2 17 12 7 22"
+                  stroke="#000"
+                  stroke-width="2"
+                  transform="matrix(-1 0 0 1 24 0)"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+        <div
+          class="StyledBox-sc-13pk1d4-0 JUlfQ"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 exddWn"
+          >
+            <button
+              class="StyledButton-sc-323bzc-0 lbUBVe"
+              type="button"
+            >
+              <svg
+                aria-label="Subtract"
+                class="StyledIcon-ofa7kd-0 dSllCE"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M2,12 L22,12"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="StyledBox-sc-13pk1d4-0 dkhTXm"
+        >
+          <button
+            class="StyledButton-sc-323bzc-0 fzQtuL"
+            disabled=""
+            type="button"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 VhefZ"
+            >
+              <svg
+                aria-label="Next"
+                class="StyledIcon-ofa7kd-0 iOkQrb"
+                viewBox="0 0 24 24"
+              >
+                <polyline
+                  fill="none"
+                  points="7 2 17 12 7 22"
+                  stroke="#000"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    class="StyledButton-sc-323bzc-0 lhIxjU"
+    type="button"
+  >
+    <span
+      class="StyledText-sc-1sadyjn-0 drtDzC"
+    >
+      Click here to start
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Login snapshot: snapshot 1`] = `
 <div
   class="sc-bdVaJa buonmG"
 >
   <div
-    class="StyledBox-sc-13pk1d4-0 cxDOqF"
+    class="StyledBox-sc-13pk1d4-0 cTXqPs"
   >
     <span
       class="StyledText-sc-1sadyjn-0 fWSbXS"
