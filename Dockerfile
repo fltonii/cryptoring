@@ -4,7 +4,10 @@ WORKDIR /cryptoring
 
 COPY . /cryptoring
 
-# RUN yarn jest
+ENV REACT_APP_API_KEY=525b33ffe0dcd742632651f78743f158
+
+
+RUN yarn jest
 RUN yarn install
 RUN yarn build
 
